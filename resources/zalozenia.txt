@@ -4,13 +4,13 @@ BANK:
     - balans
     - historia przelewów
     - Wlasciciel (konto uzytkownika)
-- Konto użytkownika
+- Konto użytkownika ok
     - imie
     - nazwisko
     - wiek
     - Adres
     - admin -> boolean
-- Przelew
+- Przelew ok
     - Data + czas
     - od kogo
     - do kogo
@@ -21,11 +21,11 @@ BANK:
     - kwota splaconych rat
     - kwota pobranego kredytu
     - termin spłaty kredytu
-- Raty (spłacanie kredytu)
+- Raty (spłacanie kredytu) ok
     - kwota
     - Termin wpłaty
     - Rata za miesiąc
-- Adres
+- Adres ok
     - ulica
     - numer domu
     - kod pocztowy
