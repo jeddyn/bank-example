@@ -1,0 +1,32 @@
+BANK:
+- Konto bankowe
+    - Status (aktywne/nieaktywne)
+    - balans
+    - historia przelewów
+    - Wlasciciel (konto uzytkownika)
+- Konto użytkownika
+    - imie
+    - nazwisko
+    - wiek
+    - Adres
+    - admin -> boolean
+- Przelew
+    - Data + czas
+    - od kogo
+    - do kogo
+    - kwota
+- Kredyt
+    - Konto uzytkownika
+    - List splacone Raty
+    - kwota splaconych rat
+    - kwota pobranego kredytu
+    - termin spłaty kredytu
+- Raty (spłacanie kredytu)
+    - kwota
+    - Termin wpłaty
+    - Rata za miesiąc
+- Adres
+    - ulica
+    - numer domu
+    - kod pocztowy
+    - miasto
