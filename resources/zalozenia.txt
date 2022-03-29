@@ -15,7 +15,7 @@ BANK:
     - od kogo
     - do kogo
     - kwota
-- Kredyt
+- Kredyt ok
     - Konto uzytkownika
     - List splacone Raty
     - kwota splaconych rat
