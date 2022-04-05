@@ -1,5 +1,6 @@
 package bank.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class KontoBankowe {
@@ -7,15 +8,27 @@ public class KontoBankowe {
     private Double balans;
     private List<Przelew> historiaPrzelewow;
     private Uzytkownik wlasciciel;
+    private List<Kredyt> kredyty;
 
     public KontoBankowe() {
+        historiaPrzelewow = new ArrayList<>();
+        kredyty = new ArrayList<>();
     }
 
-    public KontoBankowe(Status status, Double balans, List<Przelew> historiaPrzelewow, Uzytkownik wlasciciel) {
+    public KontoBankowe(Status status, Double balans, Uzytkownik wlasciciel) {
         this.status = status;
         this.balans = balans;
-        this.historiaPrzelewow = historiaPrzelewow;
         this.wlasciciel = wlasciciel;
+        historiaPrzelewow = new ArrayList<>();
+        kredyty = new ArrayList<>();
+    }
+
+    public void dodajKredyt(Kredyt kredyt){
+        kredyty.add(kredyt);
+    }
+
+    public void usunKredyt(Kredyt kredyt){
+        kredyty.remove(kredyt);
     }
 
     public Status getStatus() {

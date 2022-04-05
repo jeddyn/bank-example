@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Kredyt {
-    private KontoBankowe kontoBankowe;
     private List<Rata> splaconeRaty;
     private Double sumaSplaconychRat;
     private Double kwotaPobranegoKredytu;
@@ -13,20 +12,11 @@ public class Kredyt {
     public Kredyt() {
     }
 
-    public Kredyt(KontoBankowe kontoBankowe, List<Rata> splaconeRaty, Double sumaSplaconychRat, Double kwotaPobranegoKredytu, LocalDate terminSplatyKredytu) {
-        this.kontoBankowe = kontoBankowe;
+    public Kredyt(List<Rata> splaconeRaty, Double sumaSplaconychRat, Double kwotaPobranegoKredytu, LocalDate terminSplatyKredytu) {
         this.splaconeRaty = splaconeRaty;
         this.sumaSplaconychRat = sumaSplaconychRat;
         this.kwotaPobranegoKredytu = kwotaPobranegoKredytu;
         this.terminSplatyKredytu = terminSplatyKredytu;
-    }
-
-    public KontoBankowe getKontoBankowe() {
-        return kontoBankowe;
-    }
-
-    public void setKontoBankowe(KontoBankowe kontoBankowe) {
-        this.kontoBankowe = kontoBankowe;
     }
 
     public List<Rata> getSplaconeRaty() {
@@ -64,7 +54,6 @@ public class Kredyt {
     @Override
     public String toString() {
         return "Kredyt{" +
-                "kontoBankowe=" + kontoBankowe +
                 ", splaconeRaty=" + splaconeRaty +
                 ", sumaSplaconychRat=" + sumaSplaconychRat +
                 ", kwotaPobranegoKredytu=" + kwotaPobranegoKredytu +
