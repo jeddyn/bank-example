@@ -10,17 +10,20 @@ public class KontoBankowe {
     private Uzytkownik wlasciciel;
     private List<Kredyt> kredyty;
 
-    public KontoBankowe() {
-        historiaPrzelewow = new ArrayList<>();
-        kredyty = new ArrayList<>();
+    public KontoBankowe(Uzytkownik wlasciciel) {
+        this.status = Status.AKTYWNE;
+        this.balans = 0.0; // TODO zrobić ładniej przez stałą! (nazwa o co chodzi itd)
+        this.historiaPrzelewow = new ArrayList<>();
+        this.wlasciciel = wlasciciel;
+        this.kredyty = new ArrayList<>();
     }
 
     public KontoBankowe(Status status, Double balans, Uzytkownik wlasciciel) {
         this.status = status;
         this.balans = balans;
         this.wlasciciel = wlasciciel;
-        historiaPrzelewow = new ArrayList<>();
-        kredyty = new ArrayList<>();
+        this.historiaPrzelewow = new ArrayList<>();
+        this.kredyty = new ArrayList<>();
     }
 
     public void dodajKredyt(Kredyt kredyt){

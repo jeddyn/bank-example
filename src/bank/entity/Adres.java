@@ -6,9 +6,6 @@ public class Adres {
     private String kodPocztowy;
     private String miasto;
 
-    public Adres() {
-    }
-
     public Adres(String ulica, String numerDomu, String kodPocztowy, String miasto) {
         this.ulica = ulica;
         this.numerDomu = numerDomu;

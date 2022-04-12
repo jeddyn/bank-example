@@ -7,7 +7,12 @@ public class Uzytkownik {
     private Adres adres;
     private Boolean admin;
 
-    public Uzytkownik() {
+    public Uzytkownik(String imie, String nazwisko, Integer wiek, Adres adres) {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.wiek = wiek;
+        this.adres = adres;
+        admin = false;
     }
 
     public Uzytkownik(String imie, String nazwisko, Integer wiek, Adres adres, Boolean admin) {
