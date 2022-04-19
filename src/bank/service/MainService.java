@@ -37,4 +37,8 @@ public class MainService {
         return false;
     }
 
+    public void generujDane(){
+        repository.generujDane();
+    }
+
 }
