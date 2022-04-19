@@ -18,9 +18,9 @@ public class MainService {
         List<Uzytkownik> wszyscyUzytkownicy = repository.pobierzWszystkichUzytkownikow();
         List<Uzytkownik> wynik = new ArrayList<>();
 
-        for (int i = 0; i < wszyscyUzytkownicy.size(); i++) {
-            if(!sprawdzCzyIstnieje(wynik, wszyscyUzytkownicy.get(i))){
-                wynik.add(wszyscyUzytkownicy.get(i));
+        for (Uzytkownik uzytkownik : wszyscyUzytkownicy) {
+            if (!sprawdzCzyIstnieje(wynik, uzytkownik)) {
+                wynik.add(uzytkownik);
             }
         }
 
@@ -28,10 +28,9 @@ public class MainService {
     }
 
     private boolean sprawdzCzyIstnieje(List<Uzytkownik> wynik, Uzytkownik uzytkownik) {
-        for (int i = 0; i < wynik.size(); i++) {
-            Uzytkownik aktualnieIterowanyUzytkownik = wynik.get(i);
-            if(aktualnieIterowanyUzytkownik.getImie().equalsIgnoreCase(uzytkownik.getImie())
-            && aktualnieIterowanyUzytkownik.getNazwisko().equalsIgnoreCase(uzytkownik.getNazwisko())){
+        for (Uzytkownik aktualnieIterowanyUzytkownik : wynik) {
+            if (aktualnieIterowanyUzytkownik.getImie().equalsIgnoreCase(uzytkownik.getImie())
+                    && aktualnieIterowanyUzytkownik.getNazwisko().equalsIgnoreCase(uzytkownik.getNazwisko())) {
                 return true;
             }
         }

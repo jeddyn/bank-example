@@ -32,4 +32,13 @@ public class MainRepository {
         kontaBankowe.add(kontoBankowe3);
 
     }
+
+    public List<Uzytkownik> pobierzWszystkichUzytkownikow() {
+        List<Uzytkownik> wynik = new ArrayList<>();
+        for (KontoBankowe kontoBankowe : kontaBankowe) {
+            wynik.add(kontoBankowe.getWlasciciel());
+        }
+
+        return wynik;
+    }
 }
