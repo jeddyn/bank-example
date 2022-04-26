@@ -28,10 +28,10 @@ public class Main {
 
         System.out.println("Wybrałeś uzytkownika: " + zalogowany);
 
-        while(true){
+        while (true) {
             System.out.println("Wybierz opcję");
             int opcja = scanner.nextInt();
-            switch (opcja){
+            switch (opcja) {
                 case 1: // Wyswietl stan konta (jezeli więcej kont bankowych to wybierz, który balans wyświetlić)
                     service.wyswietlStanKonta();
                     break;
@@ -43,9 +43,23 @@ public class Main {
                     break;
                 case 5:
                     break;
+
+                case 5:
+                    break;
             }
         }
 
     }
+
+
+    public static void wyswietlMenu() {
+        System.out.println("1. Wyświetl stan konta");
+        System.out.println("2. Wyświetl dane właściciela");
+        System.out.println("3. Wykonaj przelew");
+        System.out.println("4. Weź kredyt");
+        System.out.println("5. Spłać ratę");
+        System.out.println("6. Zakończ aplikację");
+    }
+
 
 }

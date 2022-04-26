@@ -5,10 +5,9 @@ import bank.repository.MainRepository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class MainService {
-    private MainRepository repository;
+    private MainRepository repository; // TODO zrobić final
 
     public MainService() {
         this.repository = new MainRepository();
