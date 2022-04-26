@@ -33,7 +33,7 @@ public class Main {
             int opcja = scanner.nextInt();
             switch (opcja) {
                 case 1: // Wyswietl stan konta (jezeli więcej kont bankowych to wybierz, który balans wyświetlić)
-                    service.wyswietlStanKonta();
+                    service.wyswietlStanKonta(zalogowany);
                     break;
                 case 2:
                     break;
@@ -44,7 +44,7 @@ public class Main {
                 case 5:
                     break;
 
-                case 5:
+                case 6:
                     break;
             }
         }

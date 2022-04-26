@@ -41,4 +41,8 @@ public class MainRepository {
 
         return wynik;
     }
+
+    public List<KontoBankowe> pobierzWszystkieKonta(){
+        return kontaBankowe;
+    }
 }

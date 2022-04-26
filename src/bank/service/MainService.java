@@ -1,5 +1,6 @@
 package bank.service;
 
+import bank.entity.KontoBankowe;
 import bank.entity.Uzytkownik;
 import bank.repository.MainRepository;
 
@@ -28,8 +29,7 @@ public class MainService {
 
     private boolean sprawdzCzyIstnieje(List<Uzytkownik> wynik, Uzytkownik uzytkownik) {
         for (Uzytkownik aktualnieIterowanyUzytkownik : wynik) {
-            if (aktualnieIterowanyUzytkownik.getImie().equalsIgnoreCase(uzytkownik.getImie())
-                    && aktualnieIterowanyUzytkownik.getNazwisko().equalsIgnoreCase(uzytkownik.getNazwisko())) {
+            if (czyTenSamWlasciciel(uzytkownik, aktualnieIterowanyUzytkownik)) {
                 return true;
             }
         }
@@ -40,4 +40,19 @@ public class MainService {
         repository.generujDane();
     }
 
+    public void wyswietlStanKonta(Uzytkownik wlasciciel) {
+        List<KontoBankowe> kontaBankowe = repository.pobierzWszystkieKonta();
+        List<KontoBankowe> wynik = new ArrayList<>();
+        for (int i = 0; i < kontaBankowe.size(); i++) {
+            if(czyTenSamWlasciciel(wlasciciel, kontaBankowe.get(i).getWlasciciel())){
+
+            }
+        }
+
+    }
+
+    private boolean czyTenSamWlasciciel(Uzytkownik wlasciciel, Uzytkownik wlasciciel2) {
+        return wlasciciel2.getImie().equalsIgnoreCase(wlasciciel.getImie()) &&
+                wlasciciel2.getNazwisko().equalsIgnoreCase(wlasciciel.getNazwisko());
+    }
 }
