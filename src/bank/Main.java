@@ -28,14 +28,17 @@ public class Main {
 
         System.out.println("Wybrałeś uzytkownika: " + zalogowany);
 
-        while (true) {
-            System.out.println("Wybierz opcję");
+        boolean czyAktywna = true;
+
+        while (czyAktywna) {
+            wyswietlMenu();
             int opcja = scanner.nextInt();
             switch (opcja) {
                 case 1: // Wyswietl stan konta (jezeli więcej kont bankowych to wybierz, który balans wyświetlić)
                     service.wyswietlStanKonta(zalogowany);
                     break;
                 case 2:
+                    System.out.println("Właściciel konta: " + zalogowany.getImie() + " " + zalogowany.getNazwisko());
                     break;
                 case 3:
                     break;
@@ -43,8 +46,9 @@ public class Main {
                     break;
                 case 5:
                     break;
-
                 case 6:
+                    czyAktywna = false;
+                    System.out.println("Dziękujemy za wizytę!");
                     break;
             }
         }
@@ -53,6 +57,7 @@ public class Main {
 
 
     public static void wyswietlMenu() {
+        System.out.println("Wybierz opcję");
         System.out.println("1. Wyświetl stan konta");
         System.out.println("2. Wyświetl dane właściciela");
         System.out.println("3. Wykonaj przelew");
